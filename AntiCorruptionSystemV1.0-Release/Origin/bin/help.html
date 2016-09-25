@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>反贪腐系统AntiCorruptionSystemV1.0</title>
+
+</head>
+<body>
+<h1>反贪腐系统AntiCorruptionSystemV1.0</h1>
+
+<h2>帮助手册</h2>
+
+<h3>1.引言</h3>
+
+<hr />
+
+<h4>1.1介绍</h4>
+
+<p>本软件是贪腐案件信息管理系统，用于管理省份检察，贪腐案件以及相关媒体报道的信息，使用者可以随意的录入／修改／删除这些信息。同时，本软件也提供了简单的数据查询和数据统计功能。此外，本软件还提供数据备份／恢复的功能。</p>
+
+<h4>1.2关于</h4>
+
+<p>本软件使用C语言编写，GUI采用的是Gtk2，本软件的界面由作者进行设计，部分素材来源于网络，如有侵权，请立即联系作者<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#111;&#98;&#115;&#x69;&#x64;&#x69;&#x61;&#110;&#100;&#114;&#x61;&#103;&#111;&#x6e;&#50;&#x30;&#49;&#x36;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#x6f;&#x62;&#115;&#105;&#x64;&#105;&#x61;&#110;&#x64;&#x72;&#97;&#x67;&#x6f;&#x6e;&#50;&#x30;&#49;&#54;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a>，作者会及时删除／替换侵权的素材。</p>
+
+<h4>1.3协议</h4>
+
+<p>本程序为自由软件，在自由软件联盟发布的GNU通用公共许可协议的约束下，你可以对其进行再发布及修改。协议版本为第三版或（随你）更新的版本。</p>
+
+<p>我们希望发布的这款程序有用，但不保证，甚至不保证它有经济价值和适合特定用途。详情参见GNU通用公共许可协议。</p>
+
+<p>你理当已收到一份GNU通用公共许可协议的副本，如果没有，请查阅<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a></p>
+
+<h3>2.使用说明</h3>
+
+<hr />
+
+<h4>2.1安装</h4>
+
+<p>Windows下，您可以直接启动安装器Installer完成安装</p>
+
+<p>Mac/Linux下，本软件无需安装即可使用</p>
+
+<h4>2.2菜单栏</h4>
+
+<h5>2.2.1文件菜单</h5>
+
+<h6>数据备份</h6>
+
+<p>点击数据备份后，根据弹出的文件选择器选定你要保存的文件位置和文件名即可</p>
+
+<p><em>不推荐您修改文件的扩展名</em></p>
+
+<h6>数据恢复</h6>
+
+<p>点击数据恢复后，根据弹出的文件选择器选定对应的文件即可</p>
+
+<p><em>数据恢复会使得您丢失当前所有的数据</em></p>
+
+<h6>退出</h6>
+
+<p>点击后会退出本程序</p>
+
+<h5>2.2.2关于菜单</h5>
+
+<p>本菜单主要包含了软件信息，作者信息，以及协议信息</p>
+
+<h4>2.3边栏</h4>
+
+<p>边栏主要提供了三个按钮，分别对应了数据维护／数据查询／数据统计页面，您可以点击按钮以在三个页面间切换</p>
+
+<h4>2.4数据维护页面</h4>
+
+<h5>2.4.1省份信息／案件信息／媒体信息／确认按钮</h5>
+
+<p>您需要选中省份信息／案件信息／媒体信息这三个按钮中的一个，然后点击确认按钮，即可弹出对应的数据管理界面</p>
+
+<h5>2.4.2数据管理窗口</h5>
+
+<p>数据管理窗口有相似的界面，它们都使用列表的方式展示数据，此外，在窗口的最下面有四个按钮分别是添加／修改／删除／取消，用来实现对应的功能</p>
+
+<p><em>案件信息的所属省份、媒体报道的所属省份和案件编号是不可修改的</em></p>
+
+<h4>2.5数据查询页面</h4>
+
+<h5>2.5.1数据查询按钮</h5>
+
+<p>数据查询界面总共有6个查询按钮，分别对应不同的查询方式，点击后输入相关信息即可看到查询结果</p>
+
+<h4>2.6数据统计页面</h4>
+
+<h5>2.6.1数据统计按钮</h5>
+
+<p>数据统计页面总共有5个按钮，分别对应不同的统计方式，点击后即可看到统计结果</p>
+
+<p><em>有的统计方式会事先需要您输入年份或日期范围</em></p>
+
+<h3>3.其他问题</h3>
+
+<hr />
+
+<h4>3.1Bug反馈</h4>
+
+<p>请您尽可能仔细地描述Bug的内容并发送邮件至<a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#111;&#98;&#x73;&#105;&#100;&#105;&#97;&#x6e;&#x64;&#114;&#x61;&#103;&#111;&#x6e;&#x32;&#x30;&#49;&#x36;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#111;&#98;&#115;&#105;&#x64;&#x69;&#97;&#x6e;&#x64;&#x72;&#97;&#103;&#x6f;&#110;&#50;&#x30;&#x31;&#x36;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
+
+<h4>3.2再发行</h4>
+
+<p>本程序的源码可以在/src文件夹下找到。</p>
+
+<p>本程序的安装包（Windows）使用的是Inno Setup。您可以修改MSWindows文件夹下的install.iss脚本文件以重新制作安装包。</p>
+</body>
+</html>

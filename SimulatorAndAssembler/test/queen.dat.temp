@@ -1,0 +1,149 @@
+          LOADI    A        64             
+          LOADI    G        0              
+     STOREB   Z        cell           
+          ADDI     G        1              
+          LT       G        A              
+          CJMP     init                    
+          LOADI    B        0              
+          PUSH     B                       
+          CALL     dfs                     
+          HLT                              
+      POP      B                       
+          LOADI    C        8              
+          LT       B        C              
+          CJMP     next                    
+          CALL     prnt                    
+          RET                              
+     LOADI    A        0              
+       MUL      D        B       C      
+          ADD      G        A       D      
+          LOADB    D        cell           
+          EQU      D        Z              
+          NOTC                             
+          CJMP     n2                      
+          PUSH     A                       
+          PUSH     B                       
+          CALL     tag                     
+          ADD      D        B       Z      
+          ADDI     D        1              
+          PUSH     D                       
+          CALL     dfs                     
+          PUSH     A                       
+          PUSH     B                       
+          CALL     tag                     
+       ADDI     A        1              
+          LT       A        C              
+          CJMP     n1                      
+          RET                              
+     LOADI    G        0              
+          LOADW    C        cnt            
+          ADDI     C        1              
+          STOREW   C        cnt            
+          LOADI    E        1              
+          AND      D        C       E      
+          PUSH     D                       
+          LOADI    D        10             
+    DIV      E        C       D      
+          MUL      F        D       E      
+          SUB      F        C       F      
+          PUSH     F                       
+          ADDI     G        1              
+          ADD      C        E       Z      
+          LT       Z        C              
+          CJMP     loop1                   
+    POP      C                       
+          ADDI     C        48             
+          OUT      C        15             
+          SUBI     G        1              
+          LT       Z        G              
+          CJMP     loop2                   
+          LOADI    C        58             
+          OUT      C        15             
+          LOADI    C        10             
+          OUT      C        15             
+          LOADI    A        8              
+          LOADI    G        0              
+    LOADB    C        sltn           
+          PUSH     C                       
+          CALL     aline                   
+          ADDI     G        1              
+          LT       G        A              
+          CJMP     loop3                   
+          LOADI    C        10             
+          OUT      C        15             
+          POP      D                       
+          LT       Z        D              
+          CJMP     loop4                   
+          IN       D        0              
+    RET                              
+    POP      B                       
+          LOADI    A        8              
+          LOADI    D        0              
+          LOADI    E        32             
+       LOADI    C        49             
+          EQU      B        D              
+          CJMP     a2                      
+          SUBI     C        1              
+       OUT      C        15             
+          OUT      E        15             
+          ADDI     D        1              
+          LT       D        A              
+          CJMP     a1                      
+          LOADI    C        10             
+          OUT      C        15             
+          RET                              
+      POP      B                       
+          POP      A                       
+          ADD      G        B       Z      
+          STOREB   A        sltn           
+          LOADI    C        8              
+          LOADI    D        0              
+       ADDI     D        1              
+          ADD      E        B       D      
+          LT       E        C              
+          CJMP     t2                      
+          RET                              
+       PUSH     A                       
+          PUSH     B                       
+          PUSH     E                       
+          CALL     mark                    
+          SUB      F        A       D      
+          LT       F        Z              
+          CJMP     t3                      
+          PUSH     F
+
+          PUSH     B
+
+          PUSH     E
+
+          CALL     mark
+
+       ADD      F        A       D      
+          LTE      C        F              
+          CJMP     t1
+
+          PUSH     F
+
+          PUSH     B
+
+          PUSH     E
+
+          CALL     mark
+
+          JMP      t1
+
+     POP      C                
+
+          POP      B                 
+
+          POP      A                 
+
+          LOADI    D        8              
+          MUL      E        C       D      
+          ADD      G        A       E      
+          LOADB    E        cell           
+          LOADI    F        1              
+          SAL      B        F       B      
+          NOR      E        E       B      
+          STOREB   E        cell           
+          RET                              

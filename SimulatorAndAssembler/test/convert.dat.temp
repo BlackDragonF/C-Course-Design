@@ -1,0 +1,69 @@
+		LOADI C    10
+
+		LOADI D    0
+
+	IN    B    0	
+		EQU   C    B
+
+		SUBI  B    48
+
+		CJMP  main
+
+		MUL   D    D    C
+
+		ADD   D    D    B
+
+		JMP input
+
+	ADD   A    D    Z
+
+		LOADI B	   16	
+		LOADI F    0    
+		LOADI G    10   
+	DIV	  C	   A    B	
+		MUL	  D    C    B   
+		SUB   E    A	D   
+		ADDI  F	   1    
+
+		PUSH  E
+
+		ADD   A    C    Z
+
+		EQU   C    Z
+
+		CJMP  print
+
+		JMP   loop
+
+  POP   A
+
+		LT    A    G
+
+		CJMP  num
+
+		JMP   chr
+
+	SUBI  F	   1
+
+		LTE   F    Z
+
+		CJMP  end
+
+		JMP   print
+
+    ADDI  A    48
+
+		OUT   A    15
+
+		JMP   cont
+
+    ADDI  A    55
+
+		OUT   A    15
+
+		JMP   cont
+
+	HLT
+
+	HLT
+
